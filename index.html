@@ -2,65 +2,68 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El "initial-scale=1.0" es lo que evita que la web se vea en miniatura -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Coffi - Gestor de Librerías para B++</title>
     
     <style>
-        /* Estilo Retro-Moderno */
+        /* Reset para que no haya márgenes raros */
+        * { box-sizing: border-box; }
+
         body { 
             font-family: 'Courier New', Courier, monospace; 
             background-color: #C0C0C0; 
             color: #000; 
-            line-height: 1.4; 
             margin: 0; 
-            padding: 10px; 
+            padding: 10px;
+            /* Tamaño de fuente grande para que no sufras */
+            font-size: 18px; 
+            line-height: 1.5;
         }
 
         .container {
             max-width: 600px; 
             margin: 0 auto; 
             background: #FFFFFF; 
-            border: 2px outset #808080; 
-            padding: 15px;
+            border: 3px outset #808080; 
+            padding: 20px;
         }
 
         .hero { 
             background: #000080; 
             color: #FFFF00; 
-            padding: 1rem; 
+            padding: 20px; 
             text-align: center; 
             border: 2px inset #555;
+            margin-bottom: 20px;
         }
 
         .coffi-img { 
-            max-width: 150px; 
+            max-width: 120px; 
             border-radius: 50%; 
             border: 4px solid #FFFF00; 
-            margin-bottom: 10px;
         }
 
         code { 
             background: #000; 
             color: #0F0; 
-            padding: 10px; 
+            padding: 15px; 
             display: block; 
-            margin: 10px 0;
-            overflow-x: auto; /* Para que el código no rompa el móvil */
+            margin: 15px 0;
+            overflow-x: auto;
             font-weight: bold;
+            font-size: 16px; /* Ajustado para que no se desborde */
         }
+
+        h1 { font-size: 24px; margin: 10px 0; }
+        h2 { font-size: 20px; color: #800000; border-bottom: 1px solid #800000; }
 
         footer { 
-            margin-top: 20px; 
+            margin-top: 30px; 
             border-top: 2px groove #808080; 
-            padding-top: 10px; 
-            font-size: 0.8rem;
+            padding-top: 15px; 
+            font-size: 14px;
             text-align: center;
-        }
-
-        /* Responsive para que no sufras en el celular */
-        @media (max-width: 480px) {
-            .container { border: none; padding: 5px; }
-            h1 { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -70,18 +73,18 @@
     <div class="hero">
         <img src="img/coffi.png" alt="Coffi el perro" class="coffi-img">
         <h1>Coffi v1.0</h1>
-        <p>Gestor de paquetes para B++ (Android/Termux)</p>
+        <p>Gestor para B++ (Android/Termux)</p>
     </div>
 
     <section>
         <h2>Instalación</h2>
-        <p>Ejecuta esto en tu terminal:</p>
+        <p>Ejecuta en tu terminal:</p>
         <code>./B++_1.0_linux_arm64 <br> coffi install nombre_libreria</code>
     </section>
 
     <footer>
-        <p>Hecho con amor en Termux.</p>
-        <p>¿Tienes librerías? Mándalas a:<br>
+        <p>Hecho para B++ y Coffi (el perro).<br>
+        ¿Tienes librerías? Mándalas a:<br>
         <a href="mailto:loslocos817yt@gmail.com">loslocos817yt@gmail.com</a></p>
     </footer>
 </div>
